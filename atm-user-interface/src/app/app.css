@@ -93,6 +93,13 @@ nav {
   justify-content: center;
 }
 
+/* Button wrapper for isolated animations */
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Deposit navigation styling */
 .deposit-nav {
   display: flex;
@@ -102,7 +109,7 @@ nav {
   justify-content: center;
 }
 
-/* Material Design button styling */
+/* Simplified button styling - no transforms */
 button {
   background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
   color: white;
@@ -112,65 +119,39 @@ button {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
   box-shadow: 0 3px 12px rgba(33, 150, 243, 0.3);
   min-width: 120px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
 /* Deposit coins button styling */
 .deposit-coins {
-  background: linear-gradient(135deg, #CE93D8 0%, #BA68C8 100%) !important;
-  box-shadow: 0 3px 12px rgba(206, 147, 216, 0.3) !important;
+  background: linear-gradient(135deg, #CE93D8 0%, #BA68C8 100%);
+  box-shadow: 0 3px 12px rgba(206, 147, 216, 0.3);
 }
 
 .deposit-coins:hover {
-  background: linear-gradient(135deg, #C570D8 0%, #AB47BC 100%) !important;
-  box-shadow: 0 6px 20px rgba(206, 147, 216, 0.4) !important;
+  background: linear-gradient(135deg, #C570D8 0%, #AB47BC 100%);
+  box-shadow: 0 6px 20px rgba(206, 147, 216, 0.4);
 }
 
 /* Deposit notes button styling */
 .deposit-notes {
-  background: linear-gradient(135deg, #CE93D8 0%, #BA68C8 100%) !important;
-  box-shadow: 0 3px 12px rgba(206, 147, 216, 0.3) !important;
+  background: linear-gradient(135deg, #CE93D8 0%, #BA68C8 100%);
+  box-shadow: 0 3px 12px rgba(206, 147, 216, 0.3);
 }
 
 .deposit-notes:hover {
-  background: linear-gradient(135deg, #C570D8 0%, #AB47BC 100%) !important;
-  box-shadow: 0 6px 20px rgba(206, 147, 216, 0.4) !important;
+  background: linear-gradient(135deg, #C570D8 0%, #AB47BC 100%);
+  box-shadow: 0 6px 20px rgba(206, 147, 216, 0.4);
 }
 
-/* Ripple effect */
-button::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transition: width 0.6s, height 0.6s, top 0.6s, left 0.6s;
-  transform: translate(-50%, -50%);
-}
-
+/* Simple hover effects - only shadows and colors */
 button:hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
   background: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
-}
-
-button:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
-}
-
-button:active::before {
-  width: 300px;
-  height: 300px;
 }
 
 button:focus {
@@ -178,32 +159,32 @@ button:focus {
   box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
 }
 
-/* Active route styling */
+/* Active route styling - only visual differences, no movement */
 button.active {
-  transform: translateY(1px) !important;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3) !important;
-  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  filter: brightness(0.9);
 }
 
-/* Active state overrides for different button types */
+/* Active state colors for different button types */
 button:nth-child(1).active {
-  box-shadow: 0 1px 6px rgba(76, 175, 80, 0.4) !important;
+  box-shadow: 0 1px 6px rgba(76, 175, 80, 0.6);
 }
 
 button:nth-child(2).active {
-  box-shadow: 0 1px 6px rgba(255, 152, 0, 0.4) !important;
+  box-shadow: 0 1px 6px rgba(255, 152, 0, 0.6);
 }
 
 button:nth-child(3).active {
-  box-shadow: 0 1px 6px rgba(156, 39, 176, 0.4) !important;
+  box-shadow: 0 1px 6px rgba(156, 39, 176, 0.6);
 }
 
 .deposit-coins.active {
-  box-shadow: 0 1px 6px rgba(206, 147, 216, 0.4) !important;
+  box-shadow: 0 1px 6px rgba(206, 147, 216, 0.6);
 }
 
 .deposit-notes.active {
-  box-shadow: 0 1px 6px rgba(206, 147, 216, 0.4) !important;
+  box-shadow: 0 1px 6px rgba(206, 147, 216, 0.6);
 }
 
 /* Icon styling */
@@ -214,7 +195,7 @@ button:nth-child(3).active {
   display: inline-block;
 }
 
-/* Different button colors for variety */
+/* Button colors - hover only changes colors/shadows */
 button:nth-child(1) {
   background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
   box-shadow: 0 3px 12px rgba(76, 175, 80, 0.3);
