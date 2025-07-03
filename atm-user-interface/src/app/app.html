@@ -1,16 +1,29 @@
 <h1>Simple ATM User Interface</h1>
 
 <div class="card">
-  <div class="card-header">
-    ATM User Interface
-  </div>
+  <a routerLink="/" title="Go to Home">
+    <div class="card-header">
+      ATM User Interface
+    </div>
+  </a>
   <div class="card-body">
     <p class="card-text">This is a simple ATM user interface built using Angular. It demonstrates basic routing and
       component usage.</p>
     <nav>
-      <button routerLink="/balance">Balance</button>
-      <button routerLink="/withdraw">Withdraw</button>
-      <button routerLink="/deposit">Deposit</button>
+      <button routerLink="/balance" routerLinkActive="active">Balance</button>
+      <button routerLink="/withdraw" routerLinkActive="active">Withdraw</button>
+      <button routerLink="/deposit" routerLinkActive="active">Deposit</button>
+    </nav>
+
+    <nav class="deposit-nav">
+      <button routerLink="/deposit-coins" class="deposit-coins" routerLinkActive="active">
+        <span class="coin-icon">🪙</span>
+        Deposit Coins
+      </button>
+      <button routerLink="/deposit-notes" class="deposit-notes" routerLinkActive="active">
+        <span class="note-icon">💵</span>
+        Deposit Notes
+      </button>
     </nav>
 
     <router-outlet></router-outlet>
