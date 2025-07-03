@@ -1,1 +1,18 @@
-empty page
+<h1>Simple ATM User Interface</h1>
+
+<div class="card">
+  <div class="card-header">
+    ATM User Interface
+  </div>
+  <div class="card-body">
+    <p class="card-text">This is a simple ATM user interface built using Angular. It demonstrates basic routing and
+      component usage.</p>
+    <nav>
+      <button router-link="/balance">Balance</button>
+      <button router-link="/withdraw">Withdraw</button>
+      <button router-link="/deposit">Deposit</button>
+    </nav>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
