@@ -91,6 +91,8 @@ nav {
   margin-bottom: 32px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  /* Ensure buttons align properly */
 }
 
 /* Button wrapper for isolated animations */
@@ -107,13 +109,16 @@ nav {
   margin-bottom: 32px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  /* Ensure buttons align properly */
 }
 
 /* Simplified button styling - no transforms */
 button {
   background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
   color: white;
-  border: none;
+  border: 2px solid transparent;
+  /* Always has border to prevent size changes */
   padding: 12px 32px;
   border-radius: 24px;
   font-size: 1rem;
@@ -121,9 +126,16 @@ button {
   cursor: pointer;
   box-shadow: 0 3px 12px rgba(33, 150, 243, 0.3);
   min-width: 120px;
+  height: 48px;
+  /* Fixed height for all buttons */
+  line-height: 1.2;
+  /* Consistent line height */
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  transition: box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Deposit coins button styling */
@@ -162,7 +174,8 @@ button:focus {
 /* Active route styling - only visual differences, no movement */
 button.active {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  /* Changes border color instead of adding border */
   filter: brightness(0.9);
 }
 
