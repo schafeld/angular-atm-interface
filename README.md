@@ -31,3 +31,4 @@ I first set up a new Github repository for the project, then cloned it to my loc
 ## Code Starter
 
 Guided Coursera Project ["Build ATM User Interface using Routing in Angular"](https://www.coursera.org/learn/build-atm-user-interface-routing-angular).
+The guided project uses an older version of Angular, so I had to make some adjustments to the code to work with the latest version.
